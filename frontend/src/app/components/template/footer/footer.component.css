@@ -1,0 +1,13 @@
+.footer{
+  position: fixed;
+  bottom: 0;
+
+  /*Alinha os itens do rodapé ao final da página*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer > span{
+  font-size: 1.1rem;
+  font-weight: 300;
+}

@@ -1,7 +1,7 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appRed]'
+  selector: '[appRed]'//seletor da diretiva
 })
 export class RedDirective {
   //Construtor recebe elemento nativo

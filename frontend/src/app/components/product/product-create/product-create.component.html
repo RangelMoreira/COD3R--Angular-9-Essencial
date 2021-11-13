@@ -1,0 +1,43 @@
+<!-- Captura id contido em uma em uma prop -->
+<!-- Para que o Valor venha o contido na prop e não o "nome da prop" 
+  deve se usar [] 
+-->
+<!-- <p [id]="propLegal">product-create works!</p> -->
+
+<!-- O () indica que será cahamdo um método vindo de outro lugar (Binding) -->
+<!-- <button (click)="fazerAlgo()">Fazer Algo!</button> -->
+<mat-card>
+  <mat-card-title>Novo Produto</mat-card-title>
+  <form>
+    
+    <mat-form-field>
+      <!-- O product.name faz referência ao objeto product criado  -->
+      <input 
+        matInput 
+        placeholder="Nome"
+        [(ngModel)]="product.name"
+        name="name"
+      >
+    </mat-form-field>
+
+    <mat-form-field>
+      <input 
+        matInput 
+        placeholder="Preço (R$)"
+        [(ngModel)]="product.price"
+        name="price"
+      >
+    </mat-form-field>
+
+  </form>
+  <button mat-raised-button (click)="createProduct()" color="primary">
+    Salvar
+  </button>
+  
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>
+
+
+

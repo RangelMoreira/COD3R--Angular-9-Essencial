@@ -1,4 +1,6 @@
-import { NgModule } from '@angular/core';
+
+//importações para deixar os números no formato brasileiro
+import { NgModule,LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RedDirective } from './directives/red.directive'
 import { ForDirective } from './directives/for.directive';
@@ -31,6 +33,19 @@ import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
+//importações para deixar os números no formato brasileiro
+import localePt from '@angular/common/locales/pt';
+import {registerLocaleData} from "@angular/common";
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+
+//deixa a fromatação numérica do formato pt-br
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -42,7 +57,10 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     ProductCrudComponent,
     RedDirective,
     ForDirective,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent,
+    ProductRead2Component,
+    ProductUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -57,9 +75,16 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     HttpClientModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
-  providers: [],
+  //deixa a fromatação numérica do formato pt-br
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-br',
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

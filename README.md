@@ -4,7 +4,7 @@
 
 Trata-se de uma aplicação desenvolvida durante o mini curso ministrado pela [Cod3r](https://www.cod3r.com.br).
 
-A aplicação consiste em um sistema de registro de produtos o qual permite fazer todos as operaçõe necessárias para um CRUD
+A aplicação consiste em um sistema de registro de produtos o qual permite fazer todos as operaçõe necessárias para um CRUD.
 
 ## Layout
 
